@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VladislavVB/lucky.git"
+    "url": "git+https://github.com/vladislavvb/lucky.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VladislavVB/lucky/issues"
+    "url": "https://github.com/vladislavvb/lucky/issues"
   },
-  "homepage": "https://github.com/VladislavVB/lucky#readme",
+  "homepage": "https://github.com/vladislavvb/lucky#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
   }

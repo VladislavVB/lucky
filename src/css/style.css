@@ -813,6 +813,8 @@ body {
 }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   left: 0;
@@ -830,6 +832,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal__dialog {

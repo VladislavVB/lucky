@@ -508,6 +508,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: none;
 }
 
 .section-title__image::before, .section-title__image::after {
@@ -519,11 +520,12 @@ body {
 }
 
 .section-title__description {
-  font-size: 1.07rem;
+  font-size: 1.4rem;
   line-height: 135.84%;
   margin: auto;
   margin-top: 1.64rem;
-  max-width: 48rem;
+  max-width: 51rem;
+  margin-bottom: 3rem;
 }
 
 .header {
@@ -640,7 +642,7 @@ body {
 .hero__text {
   font-size: 1.57rem;
   max-width: 35.714rem;
-  line-height: 131%;
+  line-height: 135%;
   margin: 0;
   margin-bottom: 3.3rem;
 }
@@ -681,7 +683,7 @@ body {
   height: 30px;
   border: 1px solid #E3B873;
   border-radius: 50px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .instagram {
@@ -724,7 +726,7 @@ body {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 3.4rem;
+  line-height: 3.8rem;
 }
 
 .title--primary {
@@ -732,7 +734,7 @@ body {
 }
 
 .button {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .button--primary {
@@ -894,7 +896,7 @@ body {
   margin-bottom: 2.7rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   html {
     font-size: 12px;
   }
@@ -949,6 +951,9 @@ body {
 }
 
 @media screen and (max-width: 570px) {
+  .card__list {
+    max-height: 19,28rem;
+  }
   .section-title__description {
     max-width: 21.86rem;
   }

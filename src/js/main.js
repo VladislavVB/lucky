@@ -13,15 +13,15 @@
     closeBtn.addEventListener('click', switchModal);
 
 });*/
-$(document).ready(function() {
+$(document).ready(function () {
     var modal = $('.modal'),
-         modalBtn = $('[data-toggle="modal"]'),
-         closeBtn = $('.modal__close');
- 
-    modalBtn.on('cliсk', function() {
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close');
+    modalBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     });
-    closeBtn.on('cliсk', function() {
+    closeBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     });
 });
+

@@ -1124,6 +1124,9 @@ body {
   .card__list {
     max-height: 19,28rem;
   }
+  .card__items {
+    display: none;
+  }
   .section-title__description {
     max-width: 21.86rem;
   }

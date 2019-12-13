@@ -888,7 +888,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 506px;
 }
 
 .modal--visible {
@@ -919,9 +918,10 @@ body {
 .modal__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.357rem;
+  line-height: 20px;
   text-align: center;
   margin: 0;
-  margin-bottom: 2.428rem;
+  margin-bottom: 2.128rem;
 }
 
 .modal__form {
@@ -938,17 +938,22 @@ body {
   margin-bottom: 3.428rem;
 }
 
-.modal__input:last-of-type {
-  margin-bottom: 1rem;
+.modal__inputlast {
+  margin-bottom: 0.0rem;
 }
 
 .modal__button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-right: 0;
+  width: 213px;
+  height: 51px;
 }
 
 .policy__label {
   margin-bottom: 2.7rem;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .sliders__up {

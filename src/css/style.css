@@ -1211,6 +1211,9 @@ img {
   .section-title__description {
     max-width: 21.86rem;
   }
+  .projects {
+    padding-top: 10px;
+  }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;

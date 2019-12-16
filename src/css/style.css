@@ -812,13 +812,13 @@ img {
       flex-wrap: wrap;
 }
 
-.swiper-slide-image {
+.swiper-slider-image {
   display: block;
   margin-top: -15rem;
   width: 100%;
 }
 
-.swiper-slide-text {
+.swiper-slider-text {
   max-width: 22.71rem;
 }
 

@@ -1296,7 +1296,18 @@ img {
   }
   .control__input {
     color: #ffffff;
-    display: none;
+  }
+  .control__input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  .control__input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+  .control__input::-ms-input-placeholder {
+    color: #ffffff;
+  }
+  .control__input::placeholder {
+    color: #ffffff;
   }
   .control__form {
     display: -webkit-box;

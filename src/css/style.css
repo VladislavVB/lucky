@@ -638,6 +638,8 @@ img {
 
 .contacts__phone {
   margin-right: 3rem;
+  text-decoration: none;
+  border-bottom: 1px solid #E3B873;
 }
 
 .hero {
@@ -898,7 +900,7 @@ img {
   margin-bottom: 4.428rem;
   position: relative;
   max-width: 58.357rem;
-  min-height: 31rem;
+  height: 31rem;
   background: #131313 url("../img/video-mask.jpg") no-repeat center;
   -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
@@ -943,6 +945,7 @@ img {
       flex-wrap: wrap;
   max-width: 55rem;
   margin: auto;
+  font-family: 'FuturaBookC.woff';
 }
 
 .control__input-group {
@@ -1290,6 +1293,12 @@ img {
   .control {
     background: #131313;
     color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .control__label {
     margin-bottom: 0.6rem;
@@ -1317,6 +1326,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
   }
   .control__input-group {
     margin-bottom: 4.5rem;
@@ -1328,10 +1338,17 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-display: f;
+    margin-left: -14px;
+    margin-bottom: 1rem;
+  }
+  .control__button {
+    min-width: 100%;
+    margin: auto;
+    margin-top: 20rem;
+    position: absolute;
   }
   .video {
-    max-height: 97px;
+    height: 14.485rem;
   }
   .policy-order-top {
     -webkit-box-ordinal-group: 6;
@@ -1367,6 +1384,7 @@ img {
     margin-right: 0;
     color: #ffffff;
     text-decoration: none;
+    border-bottom: none;
   }
   .contacts__button {
     display: none;

@@ -65,6 +65,8 @@
   .control
     background: $dark
     color: $light
+    display: flex
+    justify-content: center
     &__label
       margin-bottom: 0.6rem
     &__input
@@ -74,18 +76,25 @@
     &__form
       display: flex
       flex-direction: column
+      position: relative
     &__input-group
       margin-bottom: 4.5rem
     &__last
       margin-bottom: 0
     &__policy
       display: flex
-      font-display: f
+      margin-left: -14px
+      margin-bottom: 1rem
+    &__button
+      min-width: 100%
+      margin: auto
+      margin-top: 20rem
+      position: absolute 
+    
   .video
-    max-height: 97px
+    height: 14.485rem
   .policy-order-top
     order: 5
-  
 @media screen and ( min-width: 760px )
   .row
     flex-direction: row
@@ -104,6 +113,7 @@
       margin-right: 0
       color: $light
       text-decoration: none
+      border-bottom: none
     &__button
       display: none
   .title

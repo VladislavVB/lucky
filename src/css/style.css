@@ -659,13 +659,13 @@ img {
 }
 
 .phone {
+  text-decoration: none;
   color: #E3B873;
+  border-bottom: 1px solid #E3B873;
 }
 
 .contacts__phone {
   margin-right: 3rem;
-  text-decoration: none;
-  border-bottom: 1px solid #E3B873;
 }
 
 .hero {
@@ -1378,6 +1378,15 @@ img {
   }
   .nav__item {
     margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1226px) {
+  .contacts__phone {
+    margin-right: 0;
+  }
+  .contacts__button {
+    margin-left: 1rem;
   }
 }
 

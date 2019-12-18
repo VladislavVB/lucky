@@ -38,9 +38,20 @@
     &::placeholder
     color: $light
 .policy
+  .policy
   &__checkbox
+    position: absolute
     opacity: 0
-    visibility: hidden
+    visibility: hidden 
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    white-space: nowrap
+    clip-path: inset(100%)
+    clip: rect(0 0 0 0)
+    overflow: hidden
     &:checked +
       .policy__label
         &::before
@@ -48,6 +59,7 @@
   &__label
     display: flex
     align-items: center
+    font-size: 1.142rem
     &::before
       content: ''
       width: 18px
@@ -56,3 +68,11 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.62rem
+    &--center
+      justify-content: center
+label
+  &.invalid
+    color: $primary
+input
+  &.invalid
+    border-bottom: 1px solid $primary

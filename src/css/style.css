@@ -984,6 +984,7 @@ img {
           flex-direction: column;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+  color: #131313;
 }
 
 .control__label {
@@ -1012,6 +1013,10 @@ img {
   display: flex;
   position: relative;
   margin: auto;
+}
+
+.form__input {
+  color: #131313;
 }
 
 .types__section-title {
@@ -1595,7 +1600,7 @@ img {
     padding: 0rem;
   }
   .footer__button {
-    min-width: 340px;
+    width: 100%;
   }
   .footer__last {
     margin-bottom: 1.4rem;

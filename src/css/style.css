@@ -1142,7 +1142,6 @@ img {
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
-  margin-top: 30rem;
 }
 
 .footer__wrap {
@@ -1220,20 +1219,46 @@ img {
   min-height: 465px;
 }
 
-.team {
-  background-color: #131313;
-  color: #ffffff;
-  margin-bottom: -20rem;
+.no {
+  min-height: 50rem;
+  background: #131313;
 }
 
-.team__title {
+.team {
+  padding-bottom: 30rem;
+}
+
+.team__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.team__section-title {
+  margin-top: -35rem;
+  color: #ffffff;
+}
+
+.team__title {
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0;
+  font-size: 17px;
+  font-family: 'Yeseva One', cursive;
+  padding-top: 22px;
+}
+
+.team__trio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.team__trio img {
+  min-width: 272px;
 }
 
 .team__text {
@@ -1241,18 +1266,60 @@ img {
   margin-bottom: 5.071rem;
 }
 
+.team__tttext {
+  position: relative;
+  margin: auto;
+  max-width: 16.6rem;
+  margin-top: -7rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
 .team__card {
   color: #131313;
 }
 
+.team__card__image {
+  max-width: 19.42rem;
+}
+
+.team__old {
+  background-color: #E3B873;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'FuturaBookC', cursive;
+  text-transform: uppercase;
+  padding: 11px 24px;
+}
+
 .team__status {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 16px;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-family: 'Yeseva One', cursive;
+  margin-top: 9px;
+  margin-bottom: 24px;
+}
+
+.team__feat {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  margin-top: 5.2rem;
+  margin-bottom: 3.2rem;
+  font-size: 1.43rem;
+  line-height: 135.84%;
+}
+
+.team__feat::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+  border-radius: 30px;
 }
 
 .map__block {
@@ -1597,9 +1664,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .card {
     -ms-flex-preferred-size: 32%;

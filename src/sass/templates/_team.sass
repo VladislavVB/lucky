@@ -1,18 +1,69 @@
 .team
-    background-color: $dark
-    color: $light
-    margin-bottom: -20rem
-    &__title
+    
+    padding-bottom: 30rem
+    &__row
         display: flex
+        justify-content: space-around
+    &__section-title
+        margin-top: -35rem
+        color: $light
+    &__title
         text-align: center
-        justify-content: center
+        margin: 0
+        font-size: 17px
+        font-family: 'Yeseva One', cursive
+        padding-top: 22px
+    &__trio
+        display: flex
+        justify-content: space-around
+        img
+            min-width: 272px
     &__text
         max-width: 32rem
         margin-bottom: 5.071rem
+    &__tttext
+        position: relative
+        margin: auto
+        max-width: 16.6rem
+        margin-top: -7rem
+        
+        background-color: #ffffff
+        -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
     &__card
         color: $dark
+        &__image
+            max-width: 19.42rem
+    &__old
+        background-color: $primary
+        color: $light
+        font-size: 12px
+        margin-top: 
+        font-family: 'FuturaBookC', cursive
+        text-transform: uppercase
+        padding: 11px 24px
         
     &__status
-        display: flex
+        font-size: 16px
         text-align: center
-        justify-content: center
+        font-family: 'Yeseva One', cursive
+        margin-top: 9px
+        margin-bottom: 24px
+    &__feat
+        text-align: center
+        max-width: 40rem
+        margin: auto
+        margin-top: 5.2rem
+        margin-bottom: 3.2rem
+        font-size: 1.43rem
+        line-height: 135.84%
+        &::before
+            content: ''
+            display: block
+            margin: auto
+            margin-bottom: 2rem
+            width: 55px
+            height: 2px
+            background-color: $primary
+            border-radius: 30px
+

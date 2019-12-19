@@ -1215,6 +1215,11 @@ img {
   padding: 4.285rem 0rem;
 }
 
+.footer__map {
+  margin-bottom: 4rem;
+  min-height: 465px;
+}
+
 .team {
   background-color: #131313;
   color: #ffffff;
@@ -1248,6 +1253,51 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.map__block {
+  margin: auto;
+  max-width: 64.071rem;
+}
+
+.map__wrap {
+  max-width: 34.071rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
+.map__title {
+  text-transform: uppercase;
+  font-family: Yeseva One, cursive;
+  font-size: 1.428rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #E3B873;
+  display: block;
+}
+
+.map__sub {
+  display: block;
+}
+
+.map__buttons {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.map__left {
+  margin-right: 7.5px;
+}
+
+.map__right {
+  margin-left: 7.5px;
 }
 
 .modal {

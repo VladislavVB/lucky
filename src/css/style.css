@@ -1377,6 +1377,53 @@ img {
   max-width: 24.44rem;
 }
 
+.people__buttons {
+  margin-left: -20px;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'Yeseva One', cursive;
+  color: #ffffff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.people__buttonone {
+  background-color: #E3B873;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 30px;
+}
+
+.people__buttonone img {
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.people__buttontwo {
+  background-color: #E3B873;
+  margin-left: 2px;
+  padding: 3px;
+  padding-right: 82px;
+}
+
 .section__people {
   margin-bottom: 20rem;
 }

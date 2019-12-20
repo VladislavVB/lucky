@@ -1142,6 +1142,7 @@ img {
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
+  margin-top: 20rem;
 }
 
 .footer__wrap {
@@ -1225,7 +1226,7 @@ img {
 }
 
 .team {
-  padding-bottom: 30rem;
+  padding-bottom: 0;
 }
 
 .team__row {
@@ -1320,6 +1321,64 @@ img {
   height: 2px;
   background-color: #E3B873;
   border-radius: 30px;
+}
+
+.people__subtext {
+  max-width: 25.71rem;
+  padding-bottom: 2.7rem;
+}
+
+.people__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.people__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 26.21rem;
+}
+
+.people__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.people__name {
+  font-size: 18px;
+  font-family: 'Yeseva One', cursive;
+  max-width: 17.07rem;
+  margin-left: 1.5rem;
+}
+
+.people__text {
+  margin-top: 2rem;
+  color: #959595;
+  font-size: 15px;
+  line-height: 180%;
+  font-family: 'FuturaBookC', cursive;
+  max-width: 24.44rem;
+}
+
+.section__people {
+  margin-bottom: 20rem;
 }
 
 .map__block {

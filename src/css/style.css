@@ -1369,9 +1369,9 @@ img {
 }
 
 .people__text {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   color: #959595;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 180%;
   font-family: 'FuturaBookC', cursive;
   max-width: 24.44rem;
@@ -1407,7 +1407,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 30px;
+  padding-right: 20px;
+  margin-right: 2px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .people__buttonone img {
@@ -1419,9 +1424,21 @@ img {
 
 .people__buttontwo {
   background-color: #E3B873;
-  margin-left: 2px;
-  padding: 3px;
-  padding-right: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 17px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.people__buttontwo img {
+  padding: 8px 15px 8px 15px;
 }
 
 .section__people {

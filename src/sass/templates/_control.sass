@@ -1,68 +1,63 @@
 .control
-    &__secton-title
-        margin-bottom: 2.214rem
-        margin-top: -30rem
-    &__video
-        display: flex
-        margin: auto
-        margin-bottom: 4.428rem
-        position: relative
-        max-width: 58.357rem
-        height: 31rem
-        background: $dark url('../img/video-mask.jpg') no-repeat center
-        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
-        &::before
-            content: ''
-            position: absolute
-            width: 100%
-            height: 100%
-            background-color: rgba(black, 0.8)
-    &__text
-        max-width: 40.785rem
-        margin: auto
-        text-align: center
-        font-size: 1.428rem
-        line-height: 2.442rem
-        margin-bottom: 4.285rem
-        &::before
-            content: ''
-            display: block
-            width: 55px
-            height: 2px
-            background-color: $primary
-            border-radius: 30px 
-            margin: auto
-            margin-bottom: 2.5rem
-    &__form
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-        max-width: 55rem
-        margin: auto
-        font-family: 'FuturaBookC.woff'
-    &__input-group
-        display: flex
-        flex-direction: column
-        flex-basis: 30%
-        color: $dark
-    &__label
-        
-        color: $secondary
-    
-    &__button
-        padding: 1.2857rem 4.7857rem
-    &__policy
-        flex-basis: 100%
-        margin-top: 1.2rem
-        &-label
-            justify-content: center
-        
+  background: $light url('../img/bg-lines.svg') no-repeat center
+  &__section-title
+    margin-top: -30rem
+    margin-bottom: 2rem
+  &__video
+    position: relative
+    display: flex
+    margin: auto
+    max-width: 58.357rem
+    height: 31rem
+    background: $dark url('../img/video-mask.jpg') center no-repeat
+    box-shadow: 0px 20px 50px rgba($dark, 0.15)
+    margin-bottom: 4.3rem
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(black, 0.8)
+  &__text
+    max-width: 40rem
+    margin: auto
+    margin-bottom: 4.7rem
+    text-align: center
+    font-size: 1.428rem
+    line-height: 2.41rem
+    &::before
+      content: ''
+      display: block
+      margin: auto
+      margin-bottom: 2rem
+      width: 55px
+      height: 2px
+      background-color: $primary
+      border-radius: 30px
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 55rem
+    margin: auto
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 30%
+  &__button
+    padding: 1.2857rem 4.7857rem
+    margin-bottom: 1.2rem
+  &__policy
+    align-self: flex-start
+    flex-basis: 100%
+    margin-top: 1.25rem
+    &-label
+      justify-content: center
+  &__label 
+    color: rgba($gray, 0.5)
+  &__input
+    color: $dark
 .video
-    &__play
-        display: flex
-        position: relative
-        margin: auto
-    &__text
-.form
-    &__input
-        color: $dark  
+  &__play
+    position: relative
+    margin: auto

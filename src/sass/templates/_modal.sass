@@ -21,7 +21,7 @@
     max-width: 36.36rem
     padding: 2.357rem 3.6rem 1.928rem
     color: $light
-    background: $dark url('../img/modal/bg-lines.svg') no-repeat center
+    background: $dark url('../img/bg-lines.svg') no-repeat center
   &__close
     position: absolute
     right: 0
@@ -45,28 +45,19 @@
     display: flex
     flex-direction: column
   &__input
+    margin-bottom: 0.2rem
     &-group
       display: flex
       flex-direction: column
-      margin-bottom: 3.3rem
-      
-    &:last-of-type
-      margin-bottom: 0.01rem
+      margin-bottom: 3rem
+      &:last-of-type
+        margin-bottom: 1.1rem
   &__policy
     margin-bottom: 2.7rem
   &__button
-    pading: 1rem 2rem
+    padding: 1.3rem 3.5rem
     align-self: flex-end
     border-radius: 0
-.input
-    &-group
-      display: flex
-      flex-direction: column
-      margin-bottom: 3.3rem
-.policy
+  .policy
     &__label
       font-size: 1.14rem
-.input--light
-  &::placeholder
-    color: $light
-  

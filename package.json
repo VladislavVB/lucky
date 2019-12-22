@@ -1,5 +1,5 @@
 {
-  "name": "lucky",
+  "name": "linanero92.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,18 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vladislavvb/lucky.git"
+    "url": "git+https://github.com/linanero92/linanero92.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vladislavvb/lucky/issues"
+    "url": "https://github.com/linanero92/linanero92.github.io/issues"
   },
-  "homepage": "https://github.com/vladislavvb/lucky#readme",
+  "homepage": "https://github.com/linanero92/linanero92.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "clean-css": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "gulp-rename": "^1.4.0"
   }
 }

@@ -1,69 +1,77 @@
 .team
-    
-    padding-bottom: 0
-    &__row
-        display: flex
-        justify-content: space-around
-    &__section-title
-        margin-top: -35rem
-        color: $light
-    &__title
-        text-align: center
-        margin: 0
-        font-size: 17px
-        font-family: 'Yeseva One', cursive
-        padding-top: 22px
-    &__trio
-        display: flex
-        justify-content: space-around
-        img
-            min-width: 272px
-    &__text
-        max-width: 32rem
-        margin-bottom: 5.071rem
-    &__tttext
-        position: relative
-        margin: auto
-        max-width: 16.6rem
-        margin-top: -7rem
-        
-        background-color: #ffffff
-        -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-    &__card
-        color: $dark
-        &__image
-            max-width: 19.42rem
-    &__old
-        background-color: $primary
-        color: $light
-        font-size: 12px
-        margin-top: 
-        font-family: 'FuturaBookC', cursive
-        text-transform: uppercase
-        padding: 11px 24px
-        
-    &__status
-        font-size: 16px
-        text-align: center
-        font-family: 'Yeseva One', cursive
-        margin-top: 9px
-        margin-bottom: 24px
-    &__feat
-        text-align: center
-        max-width: 40rem
-        margin: auto
-        margin-top: 5.2rem
-        margin-bottom: 3.2rem
-        font-size: 1.43rem
-        line-height: 135.84%
-        &::before
-            content: ''
-            display: block
-            margin: auto
-            margin-bottom: 2rem
-            width: 55px
-            height: 2px
-            background-color: $primary
-            border-radius: 30px
-
+  
+  &__section-title
+    margin-top: -34.5rem
+    margin-bottom: 5.7rem
+  &__text
+    max-width: 40rem
+    margin: auto
+    margin-top: 6.5rem
+    text-align: center
+    font-size: 1.428rem
+    line-height: 2.41rem
+    &::before
+      content: ''
+      display: block
+      margin: auto
+      margin-bottom: 0.6rem
+      width: 55px
+      height: 2px
+      background-color: $primary
+  &__card
+    max-width: 21rem
+    position: relative
+    &--project
+      &::after
+        content: ''
+        position: absolute
+        top: -2.6rem
+        left: -2.6rem
+        width: 5rem
+        height: 5rem
+        background: $primary url('../img/team/idea.svg') no-repeat center
+        box-shadow: 5px 5px 10px rgba($primary, 0.3)
+    &--design
+      &::after
+        content: ''
+        position: absolute
+        top: -2.6rem
+        left: -2.6rem
+        width: 5rem
+        height: 5rem
+        background: $primary url('../img/team/design.svg') no-repeat center
+        box-shadow: 5px 5px 10px rgba($primary, 0.3)
+    &--manage
+      &::after
+        content: ''
+        position: absolute
+        top: -2.6rem
+        left: -2.6rem
+        width: 5rem
+        height: 5rem
+        background: $primary url('../img/team/portfolio.svg') no-repeat center
+        box-shadow: 5px 5px 10px rgba($primary, 0.3)
+.card
+  &__text
+    &--small
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 16.7rem
+      margin-top: -5.8rem
+      padding: 1.7rem 0.5rem
+  &__label
+    font-family: 'Futura Book', sans-serif
+    font-size: 1.285rem
+    line-height: 1.8rem
+    color: $secondary
+  &__pricetag
+    &--small
+      padding-top: 1.1rem 
+      padding-bottom: 1.1rem 
+      left: 0
+      right: 0
+      bottom: -2.7rem
+      font-size: 0.9rem
+      text-align: center
+      box-shadow: none

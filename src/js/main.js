@@ -1,3 +1,30 @@
+/* js
+document.addEventListener("DOMContentLoaded", function (event) {
+  const modal = document.querySelector('.modal');
+  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
+  const closeBtn = document.querySelector('.modal__close');
+  const switchModal = () => {
+    modal.classList.toggle('modal--visible');
+  }
+
+  modalBtn.forEach(element => {
+    element.addEventListener('click', switchModal);
+  });
+
+  closeBtn.addEventListener('click', switchModal);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 27) {switchModal() }
+  });
+
+  document.addEventListener('click', function(e) {
+    e.target.classList.toggle('.modal--visible')
+    });
+  
+  });
+*/
+
+// jquery
 $(document).ready(function () {
  
   var modal = $('.modal'),
@@ -22,6 +49,19 @@ $(document).ready(function () {
     $(event.target).toggleClass('modal--visible');
   });
 
+  $(function(){
+	$(window).scroll(function(){
+  	if ($(document).scrollTop()>$(window).height()){
+    	 $('.scroll-to-top').show();
+    } else{
+    	$('.scroll-to-top').hide();
+    }
+  });
+  $('.scroll-to-top').click(function(){
+  	$('html,body').animate({scrollTop: 0}, 1000);
+  });
+});
+
 // slider
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -43,9 +83,10 @@ $(document).ready(function () {
 
   new WOW().init();
 
-  //валидация формы
+  //Валидация форма
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorElement: "div",
     rules: {
       // строчное правило
       userName: {
@@ -57,54 +98,97 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
-    }, //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв"
-      }, 
-      userPhone: "Телефон обязателен",
-      userEmail: {
-        required: "Обязательно укажите Email",
-        email: "Введите в формате: name@domain.com"
-      }
     }
+  }, // сообщения
+  messages: {
+    userName: {
+      required: "Имя обязательно для заполнения",
+      minlength: "Имя не короче 2-х букв"
+    },
+    userPhone: "Телефон обязателен для заполнения",
+    userEmail: {
+      required: "Обязательно укажите Email",
+      email: "Введите в формате: name@domain.com"
+    }
+  }
   });
 
-  //маска для телефона
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+  }, // сообщения
+  messages: {
+    userName: {
+      required: "Имя обязательно для заполнения",
+      minlength: "Имя не короче 2-х букв"
+    },
+    userPhone: "Телефон обязателен для заполнения",
+  }
+  });
 
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+   $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      userQuestion: "required",
+      
+  }, // сообщения
+  messages: {
+   userName: {
+      required: "Имя обязательно для заполнения",
+      minlength: "Имя не короче 2-х букв"
+    },
+    userPhone: "Телефон обязателен для заполнения",
+    userQuestion: "Пожалуйста, напишите Ваш вопрос",
+  }
+  });
+  
+  //маска для номера телефона
 
-  //яндекс карта
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [47.244734, 39.723227],
-            zoom: 15
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+  $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7(___) ___-__-__" });
+  
+  // создание yandex карты
+ ymaps.ready(function () {
+   var myMap = new ymaps.Map('map', {
+     center: [47.244734, 39.723227],
+     zoom: 15
+   }, {
+     searchControlProvider: 'yandex#search'
+   }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+     // Создаём макет содержимого.
+     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+     ),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/mapIcon.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
+     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+       hintContent: 'Наш офис',
+       balloonContent: 'Вход со двора'
+     }, {
+       // Опции.
+       // Необходимо указать данный тип макета.
+       iconLayout: 'default#image',
+       // Своё изображение иконки метки.
+       iconImageHref: 'img/mapIcon.png',
+       // Размеры метки.
+       iconImageSize: [32, 32],
+       // Смещение левого верхнего угла иконки относительно
+       // её "ножки" (точки привязки).
+      iconImageOffset: [-5, -38]
+     });
 
     myMap.geoObjects
         .add(myPlacemark);

@@ -1107,7 +1107,6 @@ img {
 }
 
 .design {
-  padding-bottom: 30rem;
   background: #ffffff url("../img/bg-lines.svg") no-repeat center;
 }
 
@@ -1328,10 +1327,10 @@ img {
 .people__text {
   margin-top: 1.4rem;
   color: #959595;
-  font-size: 14apx;
+  font-size: 14px;
   line-height: 180%;
   font-family: 'FuturaBookC', cursive;
-  max-width: 24.44rem;
+  max-width: 23.1485714rem;
 }
 
 .people__buttons {
@@ -1351,8 +1350,6 @@ img {
   line-height: 24px;
   font-family: 'Yeseva One', cursive;
   color: #ffffff;
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
 .people__buttonone {
@@ -1370,17 +1367,18 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
 .people__buttonone img {
-  margin-right: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  padding: 8px 15px 8px 15px;
 }
 
 .people__buttontwo {
   background-color: #E3B873;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1663,6 +1661,9 @@ img {
   }
   .nav__item {
     margin-right: 1rem;
+  }
+  .section__people {
+    display: none;
   }
 }
 

@@ -91,7 +91,8 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlenght: 15 
       },
       userPhone: "required",
       // правило-объект (блок)
@@ -120,7 +121,8 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlenght: 15,
       },
       userPhone: "required",
   }, // сообщения
@@ -140,7 +142,8 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlenght: 15, 
       },
       userPhone: "required",
       userQuestion: "required",

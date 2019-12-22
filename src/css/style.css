@@ -501,6 +501,15 @@ div.invalid {
   color: #E3B873;
 }
 
+.label {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.07rem;
+}
+
+.label--lighter {
+  color: #ffffff;
+}
+
 .container {
   width: 84%;
   max-width: 1256px;
@@ -1176,7 +1185,7 @@ img {
 }
 
 .steps__section {
-  min-height: 50rem;
+  min-height: 32rem;
 }
 
 .team__section-title {
@@ -1198,7 +1207,7 @@ img {
   display: block;
   margin: auto;
   margin-bottom: 0.6rem;
-  width: 55px;
+  width: 3.928rem;
   height: 2px;
   background-color: #E3B873;
 }
@@ -1334,8 +1343,8 @@ img {
 }
 
 .people__buttons {
-  margin-left: -20px;
-  padding-top: 40px;
+  margin-left: -1.428rem;
+  padding-top: 2.857rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1361,7 +1370,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 20px;
+  padding-right: 1.428rem;
   margin-right: 2px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1397,7 +1406,7 @@ img {
 }
 
 .section__people {
-  margin-bottom: 20rem;
+  margin-bottom: 1.428rem;
 }
 
 .footer {
@@ -1655,7 +1664,7 @@ img {
   font-size: 1.14rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1204px) {
   html {
     font-size: 12px;
   }
@@ -1664,6 +1673,9 @@ img {
   }
   .section__people {
     display: none;
+  }
+  .team {
+    padding-bottom: 27.142rem;
   }
 }
 
@@ -1691,6 +1703,9 @@ img {
   }
   .hero__content {
     margin-left: 0;
+  }
+  .map {
+    max-width: 50rem;
   }
 }
 

@@ -32,9 +32,12 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = "New order";
     $mail->Body    = "Имя пользователя ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail} Его вопрос: ${userQuestion}";
-    
-    $mail->send();
-   header('Location: thanks.html');
+    //проверяяем отправленность сообщения
+if ($mail->send()) {
+   echo: "Форма успешно отправлена";
+} else {
+    echo "Письмо не отправлено, неверная почта ";
+}
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }

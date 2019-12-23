@@ -62,6 +62,25 @@ $(document).ready(function () {
   });
 });
 
+$('#offer-form').on('submit', function name(event) {
+  event.preventDefault();
+  $.ajax({
+    type: "POST",
+    url: "mail.php",
+    datd: $(this).serialize(),
+    success: function (response) {
+      console.log('Прибыли данные: ' + response);
+      $('#offer-form')[0].reset();
+      modal.classList.add('modal_active');
+      $(".modal-dialog__title").text(response);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.error(jqXHR + " " + textStatus);
+      
+    }
+    
+  });
+})
 // slider
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -158,6 +177,7 @@ $(document).ready(function () {
     userQuestion: "Пожалуйста, напишите Ваш вопрос",
   }
   });
+
   
   //маска для номера телефона
 

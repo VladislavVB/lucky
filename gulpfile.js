@@ -1,4 +1,4 @@
-const {src, dest, watch, task}  = require('gulp');
+const {src, dest, watch, series, task}  = require('gulp');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
@@ -6,6 +6,10 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
+const tinypng = require('gulp-tinypng-compress');
+
+
 
 // Static server
 function bs() {
@@ -39,18 +43,45 @@ function buildCSS(done) {
 }
 
 function buildJS(done) {
-  src(['js/**.js' , 'js/**.min.js'])
+  src(['js/**.js' , '!js/**.min.js'])
+    .pipe(minify({ext:{
+        min:'.js'
+      } 
+    }))
+    .pipe(dest('dist/js/'));
+  src('!js/**.min.js').pipe(dest('dist/js/'));
   done();
 }
 
-exports.serve = bs;
-exports.serve = buildCSS;
+function html(done) {
+  src('**.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('dist/'));
+  done(); 
+}
 
-/*task('minify-css', function() {
-  return src("./src/css/*.css")
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({
-          suffix: '.min'
-        }))
-    .pipe(dest("./src/css"));
-});*/
+function php(done) {
+  src(['**.php'])
+    .pipe(dest('dist/'));
+  src(['phpmailer/**/**'])
+    .pipe(dest('dist/phpmailer/'));
+  done(); 
+}
+
+function fonts(done) {
+  src('fonts/**/**')
+    .pipe(dest('dist/fonts/'));
+  done(); 
+}
+
+function imagemin(done) {
+  src('img/**/**')
+    .pipe(tinypng({key: 'bn8fQLyknl9qfhQV3Hz8fRlljk2LgNnw'}))
+    .pipe(dest('dist/img/'))
+  src('img/**/*.svg')
+    .pipe(dest('dist/img/'))
+  done(); 
+}
+
+exports.serve = bs;
+exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);

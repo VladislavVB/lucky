@@ -3,6 +3,9 @@ const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const minify = require('gulp-minify');
 
 // Static server
 function bs() {
@@ -21,11 +24,27 @@ function bs() {
 function serveSass() {
   return src("./src/sass/**/*.sass", "./src/sass/**/*.scss")
     .pipe(sass())
+    .pipe(autoprefixer({
+      cascade: false
+  }))
     .pipe(dest("./src/css"))
     .pipe(browserSync.stream());
 };
 
+function buildCSS(done) {
+  src('css/**/**.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('dist/css/'));
+  done();
+}
+
+function buildJS(done) {
+  src(['js/**.js' , 'js/**.min.js'])
+  done();
+}
+
 exports.serve = bs;
+exports.serve = buildCSS;
 
 /*task('minify-css', function() {
   return src("./src/css/*.css")
